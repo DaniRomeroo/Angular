@@ -1,3 +1,5 @@
 <ul class="list-group">
     <li class="list-group-item" *ngFor="let heroe of heroes">{{heroe}}</li>
 </ul>
+<button (click)="borrarHeroe()">Borrar Heroe</button>
+<h1 *ngIf="borrado != ''">Se ha borrado: {{borrado}}</h1>
