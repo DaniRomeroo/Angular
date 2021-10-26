@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Personaje } from '../interfaces/dbz.interfaces';
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
 })
+
 export class MainPageComponent {
 
   personaje1: Personaje = {
@@ -31,17 +32,9 @@ export class MainPageComponent {
 
   personajes: Personaje[] = [this.personaje1, this.personaje2, this.personaje3, this.personaje4, this.personaje5];
 
-  registrarPersonaje(form: NgForm) {
-    
-    let nuevoPersonaje: Personaje = {
-      nombre: form.value.nombre,
-      poder: form.value.poder
-    }
-    this.personajes.push(nuevoPersonaje);
-  }
-}
 
-interface Personaje {
-  nombre: string,
-  poder: number,
-};
+  agregarPersonaje(data: Personaje){
+    this.personajes.push(data);
+  }
+
+}

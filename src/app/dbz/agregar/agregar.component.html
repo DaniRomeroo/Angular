@@ -1,0 +1,11 @@
+<form #form="ngForm" (ngSubmit)="registrarPersonaje()">
+    <h1>Registra personaje</h1>
+
+    <label for="Nombre">Nombre: </label>
+    <input type="text" name="nombre" autocomplete="off" [(ngModel)]="nuevoPersonaje.nombre"><br><br>
+
+    <label for="Poder">Poder: </label>
+    <input type="number" name="poder" autocomplete="off" [(ngModel)] ="nuevoPersonaje.poder"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
